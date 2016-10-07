@@ -24,7 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetCatsByUserResponse_QNAME = new QName("http://ws.cxf.cike.com/", "getCatsByUserResponse");
     private final static QName _SayHiResponse_QNAME = new QName("http://ws.cxf.cike.com/", "sayHiResponse");
+    private final static QName _GetCatsByUser_QNAME = new QName("http://ws.cxf.cike.com/", "getCatsByUser");
     private final static QName _SayHi_QNAME = new QName("http://ws.cxf.cike.com/", "sayHi");
 
     /**
@@ -43,11 +45,52 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetCatsByUserResponse }
+     * 
+     */
+    public GetCatsByUserResponse createGetCatsByUserResponse() {
+        return new GetCatsByUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCatsByUser }
+     * 
+     */
+    public GetCatsByUser createGetCatsByUser() {
+        return new GetCatsByUser();
+    }
+
+    /**
      * Create an instance of {@link SayHi }
      * 
      */
     public SayHi createSayHi() {
         return new SayHi();
+    }
+
+    /**
+     * Create an instance of {@link Cat }
+     * 
+     */
+    public Cat createCat() {
+        return new Cat();
+    }
+
+    /**
+     * Create an instance of {@link User }
+     * 
+     */
+    public User createUser() {
+        return new User();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCatsByUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.cxf.cike.com/", name = "getCatsByUserResponse")
+    public JAXBElement<GetCatsByUserResponse> createGetCatsByUserResponse(GetCatsByUserResponse value) {
+        return new JAXBElement<GetCatsByUserResponse>(_GetCatsByUserResponse_QNAME, GetCatsByUserResponse.class, null, value);
     }
 
     /**
@@ -57,6 +100,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.cxf.cike.com/", name = "sayHiResponse")
     public JAXBElement<SayHiResponse> createSayHiResponse(SayHiResponse value) {
         return new JAXBElement<SayHiResponse>(_SayHiResponse_QNAME, SayHiResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCatsByUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.cxf.cike.com/", name = "getCatsByUser")
+    public JAXBElement<GetCatsByUser> createGetCatsByUser(GetCatsByUser value) {
+        return new JAXBElement<GetCatsByUser>(_GetCatsByUser_QNAME, GetCatsByUser.class, null, value);
     }
 
     /**
